@@ -52,7 +52,7 @@ module Rails
       end
 
       def timeago_tag_content(time, time_options = {}) # :nodoc:
-        time = time.to_date            if time_options[:date_only]
+        time = time.to_date            if time_options[:date_only] and (time_options[:limit].nil? or time_options[:limit] > time)
         return time_ago_in_words(time) if time_options[:nojs] and (time_options[:limit].nil? or time_options[:limit] < time)
 
         I18n.l time, :format => time_options[:format]
