@@ -65,8 +65,8 @@ module Rails
         :nojs      => false,
         :force     => false,
         :format    => :default,
-        :limit     => proc { 4.days.ago },
-        :date_only => true,
+        :limit     => proc { 1.days.ago },
+        :date_only => false,
         :default   => '-',
         :title     => proc { |time, options| I18n.l time, :format => options[:format] }
       }
