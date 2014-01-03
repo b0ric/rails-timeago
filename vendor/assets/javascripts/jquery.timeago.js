@@ -22,7 +22,7 @@
     // Browser globals
     factory(jQuery);
   }
-}(function ($) {
+}(function ($)	 {
   $.timeago = function(timestamp) {
     if (timestamp instanceof Date) {
       return inWords(timestamp);
@@ -48,8 +48,8 @@
         prefixFromNow: null,
         suffixAgo: "ago",
         suffixFromNow: "from now",
-        seconds: "1m ago",
-        minute: "1m ago",
+        seconds: "%ds",
+        minute: "1m",
         minutes: "%dm",
         hour: "1h",
         hours: "%dh",
